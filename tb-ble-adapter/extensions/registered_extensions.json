@@ -1,10 +1,10 @@
 {
     "MiTempHumidityExtension": {
         "ble_name": "MJ_HT_V1",
-	"description": "Xaiomi MI Humidity and Temperature sensor"
+        "description": "Xaiomi MI Humidity and Temperature sensor"
     },
     "EspGattDemoExtension": {
         "ble_name": "ESP_GATTS_DEMO",
-	"description": "ESP32 BLE Demo Device"
+        "description": "ESP32 BLE Demo Device"
     }
 }

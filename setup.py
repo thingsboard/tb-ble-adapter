@@ -1,14 +1,16 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
+
 setup(
   name = 'tb-ble-adapter',
-  version = '0.1',
+  packages = [ 'tb-ble-adapter', 'tb-ble-adapter/extensions' ],
+  version = '1.6.0',
   license='Apache',
-  description = 'ble adapter demo, that connects to available devices and sends data from them to thingsboard server',
-  author = '',
-  author_email = '',
-  url = '',
-  download_url = '',
-  keywords = ['tb-ble-adapter', 'demo', 'bluetooth low energy'],
+  description = 'BLE adapter demo, that connects to available devices and sends data from them to ThingsBoard server',
+  author = 'ThingsBoard',
+  author_email = 'support@thingsboard.io',
+  url = 'https://github.com/thingsboard/tb-ble-adapter',
+  download_url = 'https://github.com/thingsboard/tb-ble-adapter',
+  keywords = ['tb-ble-adapter', 'demo', 'bluetooth low energy', 'thingsboard'],
   install_requires=[
           'btlewrap',
           'bluepy',
