@@ -52,7 +52,7 @@ def ble_rescan(tb_gateway):
 
             tb_gateway.gw_connect_device(tb_name)
 
-            tb_gateway.gw_send_attributes(tb_name, {"active": False})
+            tb_gateway.gw_send_attributes(tb_name, {"discovered": False})
             tb_gateway.gw_disconnect_device(tb_name)
 
         dev_data["scanned"].clear()
@@ -80,7 +80,10 @@ def ble_rescan(tb_gateway):
 
                         # Force TB to create a device
                         tb_gateway.gw_connect_device(tb_name)
-                        tb_gateway.gw_send_attributes(tb_name, {"active": True})
+                        tb_gateway.gw_send_attributes(tb_name, {"discovered": True,
+                                                                "type": value,
+                                                                "mac_addr": dev.addr,
+                                                                "description": known_devices[value]["desription"]})
                         tb_gateway.gw_disconnect_device(tb_name)
 
                         known_devices_found = True
@@ -101,6 +104,7 @@ with open(CURRENT_SCRIPT_DIR + "/extensions/registered_extensions.json") as fl:
         extension_module = import_extension(extension_name)
         extension_class = extension_module.Extension
         known_devices[extension_data["ble_name"]] = {
+            "desription": extension_data["description"],
             "extension": extension_class,
             "scanned": {}
         }
