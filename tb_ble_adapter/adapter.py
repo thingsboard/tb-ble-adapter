@@ -12,10 +12,10 @@ import argparse
 
 # To make sure 'import extensions' will work properly
 if __name__ == '__main__' and __package__ is None:
-    from os import sys, path
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-import extensions
+    import extensions
+else:
+    # When imported as a package, use relative syntax
+    from . import extensions
 
 CURRENT_SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 

@@ -6,7 +6,7 @@ setup(
   name = 'tb-ble-adapter',
   packages = find_packages(),
   scripts = [ 'bin/tb_ble_adapter' ],
-  version = '1.8.2',
+  version = '1.8.3',
   license='Apache',
   description = 'BLE adapter demo, that connects to available devices and sends data from them to ThingsBoard server',
   author = 'ThingsBoard',
