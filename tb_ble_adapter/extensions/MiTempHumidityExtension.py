@@ -30,3 +30,11 @@ class Extension(ExtensionInterface.ExtensionInterface):
         bt_device.writeCharacteristic(0x10, b'\x01\x00', True)
         bt_device.waitForNotifications(1)
         return delegate.telemetry
+
+    @staticmethod
+    def ble_name():
+        return "MJ_HT_V1"
+
+    @staticmethod
+    def description():
+        return "Xaiomi MI Humidity and Temperature sensor"

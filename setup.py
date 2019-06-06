@@ -1,10 +1,12 @@
 from setuptools import setup, find_packages
 
+print(find_packages())
+
 setup(
   name = 'tb-ble-adapter',
-  packages = [ 'tb-ble-adapter/extensions' ],
-  scripts = [ 'tb-ble-adapter.py' ],
-  version = '1.8.1',
+  packages = find_packages(),
+  scripts = [ 'bin/tb_ble_adapter' ],
+  version = '1.8.2',
   license='Apache',
   description = 'BLE adapter demo, that connects to available devices and sends data from them to ThingsBoard server',
   author = 'ThingsBoard',

@@ -20,3 +20,11 @@ class ExtensionInterface:
 
     def notify_supported(self):
         return self.noti_supported
+
+    @staticmethod
+    def ble_name():
+        return ""
+
+    @staticmethod
+    def description():
+        return ""

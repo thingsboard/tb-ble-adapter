@@ -47,3 +47,11 @@ class Extension(ExtensionInterface.ExtensionInterface):
 
         print("Received GATT data from ESP: T={}, H={}".format(temperature, humidity));
         return { "temperature" : temperature, "humidity" : humidity }
+
+    @staticmethod
+    def ble_name():
+        return "ESP_GATTS_DEMO"
+
+    @staticmethod
+    def description():
+        return "ESP32 BLE Demo Device"
