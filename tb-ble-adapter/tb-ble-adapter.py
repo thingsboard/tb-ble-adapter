@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from btlewrap.bluepy import BluepyBackend
 from tb_device_mqtt import TBDeviceMqttClient, TBPublishInfo
 from bluepy.btle import DefaultDelegate, Peripheral, Scanner

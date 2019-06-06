@@ -2,8 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
   name = 'tb-ble-adapter',
-  packages = [ 'tb-ble-adapter', 'tb-ble-adapter/extensions' ],
-  version = '1.6.0',
+  packages = [ 'tb-ble-adapter/extensions' ],
+  scripts = [ 'scripts/tb-ble-adapter.py' ],
+  version = '1.8.0',
   license='Apache',
   description = 'BLE adapter demo, that connects to available devices and sends data from them to ThingsBoard server',
   author = 'ThingsBoard',
@@ -14,7 +15,7 @@ setup(
   install_requires=[
           'btlewrap',
           'bluepy',
-          'bt-mqtt-client',
+          'tb-mqtt-client',
       ],
   classifiers=[
     'Intended Audience :: Developers',
