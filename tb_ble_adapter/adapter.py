@@ -117,9 +117,9 @@ def run_ble_adapter():
             global rescan_required
             rescan_required = True
 
-    gateway = TBGatewayMqttClient(args.server, args.token)
+    gateway = TBGatewayMqttClient(args.server,args.port, args.token)
     gateway.set_server_side_rpc_request_handler(on_server_side_rpc_request)
-    gateway.connect(port=args.port)
+    gateway.connect()
 
     while True:
         if rescan_required:
